@@ -10,6 +10,7 @@ import {
 import MessageBubble from '../../components/MessageBubble';
 import TypingIndicator from '../../components/TypingIndicator';
 import QuickActions from '../../components/QuickActions';
+import historyPage from './historyPage';
 
 const ChatPage = () => {
   const [messages, setMessages] = useState([

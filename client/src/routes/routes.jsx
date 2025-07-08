@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import ChatLayout from "../layouts/ChatLayout";
 import ChatPage from "../pages/chat/ChatPage";
+import HistoryPage from "../pages/chat/historyPage"; // Make sure this import matches your file name
 
 const router = createBrowserRouter([
   {
@@ -18,17 +19,10 @@ const router = createBrowserRouter([
             🚚 Delivery Page (Coming Soon)
           </div>
         ),
-        children: [
-          {
-            path: "/delivery",
-          },
-        ],
       },
       {
-        path: "history",
-        element: (
-          <div className="p-6 text-gray-700">📜 History Page (Coming Soon)</div>
-        ),
+        path: "history", // Remove the leading slash for nested routes
+        element: <HistoryPage />, // Use proper component name
       },
       {
         path: "report-status",
